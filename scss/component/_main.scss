@@ -1,0 +1,89 @@
+@use "../base/var" as v;
+.wrapper{
+
+  .publication {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 13px;
+    margin-bottom: 1rem;
+    cursor: pointer; 
+    
+
+    
+    &__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      
+    }
+    &__content {
+      
+      &__message {
+        position: relative; 
+        
+        
+        strong{
+          color:hsl(224, 21%, 14%);
+          font-weight: 800; 
+        }
+        .indicador{
+          width: 8px;
+          height: 8px;
+          background-color: red;
+          border-radius: 50%;
+          position: absolute;
+          margin: 5px;
+        }
+
+        &--color-blue{
+          color: v.$Blue;
+          font-weight: 800;
+        }
+
+        b{
+          color: v.$Dark-grayish-blue;
+          font-weight: 800;
+        }
+        
+
+          
+        
+      }
+      &__date {
+        margin-top: .2rem;
+      }
+
+
+    }
+    .publication__avatar--img{
+      width: 40px;
+      height: 40px;
+    }
+
+    
+
+    .active{
+      background-color: v.$Light-grayish-blue-2;        
+        
+    }
+
+    
+  }
+  .publication__private{
+    border: 1px solid v.$Light-grayish-blue-2;
+    margin-left: 4.375rem;
+    border-radius: 5px;
+    padding: 1.1875rem 1rem;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .4px;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    color: v.$Dark-grayish-blue;
+    
+
+  }
+}

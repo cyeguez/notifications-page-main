@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- Fuentes tipográficas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+
+
+</head>
+
+<body>
+
+  <section class="container">
+    <header class="header">
+      <h1 class="header__title">Notifications <span class="header__title--counter">3</span></h1>
+      <p class="header__mark">Mark all as read</p>
+    </header>
+
+    <main class="wrapper">
+      <article class="publication active">
+        <img src="./assets/images/avatar-mark-webber.webp" alt="Avatar Mark" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Mark Webber</strong> reacted to your recent post <b>My first
+              tournament today!</b> <span class="indicador"></span></p>
+          <p class="publication__content__date">1m ago</p>
+        </div>
+      </article>
+
+      <article class="publication active">
+        <img src="./assets/images/avatar-angela-gray.webp" alt="Avatar Angela" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Angela Gray</strong> followed you <span class="indicador"></span></p>
+          <p class="publication__content__date">5m ago</p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="Avatar Jacob" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Jacob Thompson</strong> has joined your group <span 
+              class="publication__content__message--color-blue">Chess Club</span> <span class="indicador"></span></p>
+          <p class="publication__content__date">1 day ago</p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Avatar Rizky" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Rizky Hasanuddin</strong> sent you a private message <span
+              class="publication__content__message--color-blue">Chess Club</span> <span class="indicador"></span></p>
+          <p class="publication__content__date">5 days ago</p>
+        </div>
+
+      </article>
+
+      <div class="publication__private">
+        <p class="publication__private__massage">
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+          I'm already having lots of fun and improving my game.
+        </p>
+      </div>
+
+      <article class="publication">
+        <img src="./assets/images/avatar-kimberly-smith.webp" alt="Avatar Kimberly" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Kimberly Smith</strong> commented on your picture <span class="indicador"></span></p>
+          <p class="publication__content__date">1 week ago</p>
+        </div>
+        <img src="./assets/images/image-chess.webp" alt="Chees game" class="publication__avatar--img">
+      </article>
+
+      <article class="publication">
+        <img src="./assets/images/avatar-nathan-peterson.webp" alt="Avatar Peterson" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Nathan Peterson</strong> reacted to your recent post <b>5
+              end-game strategies to increase your win rate</b> <span class="indicador"></span></p>
+          <p class="publication__content__date">2 weeks ago</p>
+        </div>
+
+      </article>
+
+      <article class="publication ">
+        <img src="./assets/images/avatar-anna-kim.webp" alt="Avatar Anna" class="publication__avatar">
+        <div class="publication__content">
+          <p class="publication__content__message"><strong>Anna Kim</strong> left the group <span
+              class="publication__content__message--color-blue">Chess Club</span> <span class="indicador" id="positionIdicador"></span></p>
+          <p class="publication__content__date"> 2 weeks ago</p>
+        </div>
+      </article>
+
+    </main>
+
+  </section>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

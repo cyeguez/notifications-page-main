@@ -1,0 +1,7 @@
+@forward "../component/header"; //Importando el header
+@forward "../component/main"; //Importando el main
+@forward "../component/footer"; //Importando el footer
+@use "../base/reset"; //usando el reset general
+@use "../base/general"; //usando estilos generales personalizados
+
+

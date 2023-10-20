@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* -------------------------------- variables ------------------------------- */
+/* -------------------------- Fuentes tipográficas -------------------------- */
+.container {
+  padding: 0 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.container .header {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .header__title {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+  font-size: 1em;
+}
+.container .header__title--counter {
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  margin-left: 0.6rem;
+}
+
+.wrapper .publication {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 13px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.wrapper .publication__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.wrapper .publication__content__message {
+  position: relative;
+}
+.wrapper .publication__content__message strong {
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+}
+.wrapper .publication__content__message .indicador {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  margin: 5px;
+}
+.wrapper .publication__content__message--color-blue {
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+}
+.wrapper .publication__content__message b {
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+}
+.wrapper .publication__content__date {
+  margin-top: 0.2rem;
+}
+.wrapper .publication .publication__avatar--img {
+  width: 40px;
+  height: 40px;
+}
+.wrapper .publication .active {
+  background-color: hsl(205, 33%, 90%);
+}
+.wrapper .publication__private {
+  border: 1px solid hsl(205, 33%, 90%);
+  margin-left: 4.375rem;
+  border-radius: 5px;
+  padding: 1.1875rem 1rem;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  color: hsl(219, 12%, 42%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Definimos las Custom properties */
+:root {
+  /* Colores */
+  --negro: #393939;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* (Opcional) Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+}
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  object-fit: cover;
+  /* (Opcional) */
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(219, 12%, 42%);
+}
