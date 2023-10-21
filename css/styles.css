@@ -4,6 +4,10 @@
 .container {
   padding: 0 1rem;
   background-color: hsl(0, 0%, 100%);
+  width: min(100%, 700px);
+  height: min(100%, 800px);
+  margin: 60px auto;
+  border-radius: 20px;
 }
 .container .header {
   width: 100%;
@@ -30,29 +34,31 @@
   padding: 1rem;
   display: flex;
   gap: 1rem;
-  font-size: 13px;
+  font-size: 12px;
   margin-bottom: 1rem;
   cursor: pointer;
+  position: relative;
 }
 .wrapper .publication__avatar {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
 }
-.wrapper .publication__content__message {
+.wrapper .publication__content {
+  width: 74%;
   position: relative;
 }
 .wrapper .publication__content__message strong {
   color: hsl(224, 21%, 14%);
   font-weight: 800;
 }
-.wrapper .publication__content__message .indicador {
+.wrapper .publication__content__message .let-indicador {
   width: 8px;
   height: 8px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  margin: 5px;
+  margin: 0.25rem 0.5rem;
 }
 .wrapper .publication__content__message--color-blue {
   color: hsl(219, 85%, 26%);
@@ -65,19 +71,25 @@
 .wrapper .publication__content__date {
   margin-top: 0.2rem;
 }
-.wrapper .publication .publication__avatar--img {
-  width: 40px;
-  height: 40px;
+.wrapper .publication .publication__content--size {
+  width: 60%;
 }
-.wrapper .publication .active {
-  background-color: hsl(205, 33%, 90%);
+.wrapper .publication .publication__avatar--img {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 0;
+}
+.wrapper .publication.active {
+  background-color: #F6FAFD;
+  border-radius: 5px;
 }
 .wrapper .publication__private {
   border: 1px solid hsl(205, 33%, 90%);
   margin-left: 4.375rem;
   border-radius: 5px;
   padding: 1.1875rem 1rem;
-  font-size: 13px;
+  font-size: 0.813em;
   font-weight: 400;
   letter-spacing: 0.4px;
   margin-top: -1rem;
@@ -86,13 +98,24 @@
 }
 
 .attribution {
-  font-size: 11px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.688em;
   text-align: center;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
+@media screen and (min-width: 760px) {
+  .attribution {
+    font-size: 0.875em;
+  }
+}
 /* Definimos las Custom properties */
 :root {
   /* Colores */
@@ -226,6 +249,7 @@ body {
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   color: hsl(219, 12%, 42%);
+  background-color: #F9FAFE;
 }
