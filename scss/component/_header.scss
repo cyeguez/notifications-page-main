@@ -17,6 +17,9 @@
       font-weight: 800 ;
       color: v.$Very-dark-blue;
       font-size: 1em;
+      
+
+
 
       &--counter{
         background-color: v.$Blue;
@@ -25,6 +28,14 @@
         border-radius: 5px;
         margin-left: .6rem;
 
+      }
+
+      
+    }
+    .header__mark{
+      &:hover{
+        cursor: pointer;
+        color: v.$Blue;
       }
     }
   }

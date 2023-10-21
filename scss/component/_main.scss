@@ -1,101 +1,123 @@
 @use "../base/var" as v;
-.wrapper{
-
+.wrapper {
   .publication {
     width: 100%;
     padding: 1rem;
     display: flex;
     gap: 1rem;
     font-size: 12px;
-    margin-bottom: 1rem;
-    cursor: pointer;   
-    position: relative;
-    
 
-    
+   
+
+    margin-bottom: 1rem;
+    cursor: pointer;
+    position: relative;
+
     &__avatar {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-
-      
-    }
-    
-    &__content {
-      width: 74%;
-      position: relative;     
-      
-      &__message {
-           
-        
-        strong{
-          color:hsl(224, 21%, 14%);
-          font-weight: 800; 
-        }
-        .let-indicador{
-          width: 8px;
-          height: 8px;
-          background-color: red;
-          border-radius: 50%;
-          position: absolute;
-          margin: .25rem .5rem;
-          
-        }
-
-        &--color-blue{
-          color: v.$Blue;
-          font-weight: 800;
-        }
-
-        b{
-          color: v.$Dark-grayish-blue;
-          font-weight: 800;
-        }
-        
-
-          
-        
-      }
-      &__date {
-        margin-top: .2rem;
-      }
-
-
     }
 
-    .publication__content--size{
-      width: 60%;
-
-    }
-    .publication__avatar--img{
-      width: 2.5rem;
-      height: 2.5rem;
+    .publication__picture {
+      width: 40px;
+      height: 40px;
       position: absolute;
       right: 0;
+      border-radius: 6px;
+      border: 1px solid transparent;
+
+      &:hover {
+        border: 1px solid v.$Light-grayish-blue-2;
+        cursor: pointer;
+      }
+    }
+
+    &__content {
+      width: 74%;
+      position: relative;
+
+      &__message {
+        strong {
+          color: hsl(224, 21%, 14%);
+          font-weight: 800;
+
+          &:hover {
+            cursor: pointer;
+            color: v.$Blue;
+          }
+        }
+        .let-indicador {
+          width: 8px;
+          height: 8px;
+          background-color: v.$Red;
+          border-radius: 50%;
+          position: absolute;
+          margin: 0.25rem 0.5rem;
+        }
+
+        b {
+          color: v.$Dark-grayish-blue;
+          font-weight: 800;
+          &:hover {
+            cursor: pointer;
+            color: v.$Blue;
+          }
+        }
+      }
+      &__date {
+        margin-top: 0.2rem;
+      }
+    }
+
+    .publication__content--size {
+      width: 60%;
     }
 
     
 
-    &.active{
-      background-color: v.$Very-light-grayishblue-1;   
-      border-radius: 5px;     
-        
-    }
-
-    
   }
-  .publication__private{
+  .publication__private {
     border: 1px solid v.$Light-grayish-blue-2;
-    margin-left: 4.375rem;
+    margin: 1rem 0 2rem 4.375rem;
     border-radius: 5px;
     padding: 1.1875rem 1rem;
-    font-size: 0.813em;
-    font-weight: 400;
-    letter-spacing: .4px;
-    margin-top: -1rem;
-    margin-bottom: 2rem;
-    color: v.$Dark-grayish-blue;
     
+    
+    &__massage{
 
+      font-size: 0.813em;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      margin-top: -1rem;
+      
+      color: v.$Dark-grayish-blue;
+    }
+    &:hover {
+      background-color: v.$Light-grayish-blue-2;
+      border-radius: 5px;
+    }
   }
+}
+
+
+.publication.active {
+  background-color: v.$Very-light-grayishblue-1;
+  border-radius: 5px;
+
+ 
+
+  
+}
+
+.publication.active .publication__content span {
+  
+    width: 8px;
+    height: 8px;
+    background-color: v.$Red;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0.25rem 0.5rem;
+    
+  
 }

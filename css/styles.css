@@ -28,6 +28,10 @@
   border-radius: 5px;
   margin-left: 0.6rem;
 }
+.container .header .header__mark:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
 
 .wrapper .publication {
   width: 100%;
@@ -44,6 +48,18 @@
   height: 2.5rem;
   border-radius: 50%;
 }
+.wrapper .publication .publication__picture {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+.wrapper .publication .publication__picture:hover {
+  border: 1px solid hsl(205, 33%, 90%);
+  cursor: pointer;
+}
 .wrapper .publication__content {
   width: 74%;
   position: relative;
@@ -52,21 +68,25 @@
   color: hsl(224, 21%, 14%);
   font-weight: 800;
 }
+.wrapper .publication__content__message strong:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
 .wrapper .publication__content__message .let-indicador {
   width: 8px;
   height: 8px;
-  background-color: red;
+  background-color: hsl(1, 90%, 64%);
   border-radius: 50%;
   position: absolute;
   margin: 0.25rem 0.5rem;
 }
-.wrapper .publication__content__message--color-blue {
-  color: hsl(219, 85%, 26%);
-  font-weight: 800;
-}
 .wrapper .publication__content__message b {
   color: hsl(219, 12%, 42%);
   font-weight: 800;
+}
+.wrapper .publication__content__message b:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
 }
 .wrapper .publication__content__date {
   margin-top: 0.2rem;
@@ -74,27 +94,36 @@
 .wrapper .publication .publication__content--size {
   width: 60%;
 }
-.wrapper .publication .publication__avatar--img {
-  width: 2.5rem;
-  height: 2.5rem;
-  position: absolute;
-  right: 0;
-}
-.wrapper .publication.active {
-  background-color: #F6FAFD;
-  border-radius: 5px;
-}
 .wrapper .publication__private {
   border: 1px solid hsl(205, 33%, 90%);
-  margin-left: 4.375rem;
+  margin: 1rem 0 2rem 4.375rem;
   border-radius: 5px;
   padding: 1.1875rem 1rem;
+}
+.wrapper .publication__private__massage {
   font-size: 0.813em;
   font-weight: 400;
   letter-spacing: 0.4px;
   margin-top: -1rem;
-  margin-bottom: 2rem;
   color: hsl(219, 12%, 42%);
+}
+.wrapper .publication__private:hover {
+  background-color: hsl(205, 33%, 90%);
+  border-radius: 5px;
+}
+
+.publication.active {
+  background-color: #F6FAFD;
+  border-radius: 5px;
+}
+
+.publication.active .publication__content span {
+  width: 8px;
+  height: 8px;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  position: absolute;
+  margin: 0.25rem 0.5rem;
 }
 
 .attribution {
