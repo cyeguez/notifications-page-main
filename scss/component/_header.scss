@@ -1,6 +1,6 @@
 @use "../base/var" as v;
 .container{
-  padding: 0 1rem ;
+  padding: 0 1rem;
   background-color:v.$White ;
   width: min(100%,700px);
   height: min(100%, 800px);
@@ -39,4 +39,11 @@
       }
     }
   }
+}
+
+@media screen and (min-width: 768px) {
+  .container{
+    padding: 1rem 2rem;
+  }
+  
 }
